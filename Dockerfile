@@ -1,11 +1,11 @@
 # SCM-Manager (scm-server)
 #
-FROM alpine:3.1
+FROM nikom/alpine-java-base
 MAINTAINER Niko Mahle <niko.mahle@googlemail.com>
 RUN apk add --update openjdk7-jre curl mercurial && rm -rf /var/cache/apk/*
 
 # scm-server environment
-ENV SCM_VERSION 1.45
+ENV SCM_VERSION 1.46
 ENV SCM_PKG_URL https://maven.scm-manager.org/nexus/content/repositories/releases/sonia/scm/scm-server/${SCM_VERSION}/scm-server-${SCM_VERSION}-app.tar.gz
 ENV SCM_HOME /var/lib/scm
 
